@@ -1,26 +1,34 @@
 from PIL import Image
 import numpy as np
 
-image = Image.open('d:/z_temp/za.png')
+image = Image.open('Source') # replace with source file path
+y = 1000
+image = image.resize((int(1.75*y),y))
 imageArray = np.asarray(image)
 
-imageArray.shape
+imageArray = imageArray.astype('float64')
 
-image = image.resize((1750, int(1000 * int(imageArray.shape[0])/int(imageArray.shape[1]) ) ) )
-image.size
-imageArray = np.asarray(image)
+xx = (np.max(imageArray))
+imageArray = ( imageArray / xx ) * 255
+np.sum(imageArray>0)
 
-grayImageArray = np.array([[0 for i in range(imageArray.shape[1])] for j in range(imageArray.shape[0])])
-for i in range(imageArray.shape[0]):
-     for j in range(imageArray.shape[1]):
-        x = ( int(imageArray[i][j][0]) + int(imageArray[i][j][1]) + int(imageArray[i][j][2]) )
-        grayImageArray[i][j] = np.uint8(x // 3)
+try:
+    grayImageArray = np.array([[0 for i in range(imageArray.shape[1])] for j in range(imageArray.shape[0])])
+    for i in range(imageArray.shape[0]):
+        for j in range(imageArray.shape[1]):
+            x = ( (imageArray[i][j][0]) + (imageArray[i][j][1]) + (imageArray[i][j][2]) )
+            grayImageArray[i][j] = x/3
+except:
+    grayImageArray = imageArray
+dest = open ( 'Destination' , 'w' ) # replace with destination file path
 
 grayLevels = '.:-=+*#%@'
 
 for i in range(imageArray.shape[0]):
     for j in range(imageArray.shape[1]):
-        densityLevel = ( 9 * int(grayImageArray[i][j]) ) // 255
-        densityLevel = min(densityLevel, 8)
+        densityLevel = ( 9 * (grayImageArray[i][j]) ) // 255
+        densityLevel = int(min(densityLevel, 8))
         print(grayLevels[densityLevel], end='')
+        dest.write(grayLevels[densityLevel])
     print()
+    dest.write('\n')
