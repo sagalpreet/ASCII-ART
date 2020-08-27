@@ -1,12 +1,12 @@
 from PIL import Image
 import numpy as np
 
-image = Image.open('d:/z_temp/Annotation 2020-07-07 220912.png')
+image = Image.open('d:/z_temp/za.png')
 imageArray = np.asarray(image)
 
 imageArray.shape
 
-image = image.resize((1000, int(1000 * int(imageArray.shape[0])/int(imageArray.shape[1]) ) ) )
+image = image.resize((1750, int(1000 * int(imageArray.shape[0])/int(imageArray.shape[1]) ) ) )
 image.size
 imageArray = np.asarray(image)
 
@@ -21,5 +21,6 @@ grayLevels = '.:-=+*#%@'
 for i in range(imageArray.shape[0]):
     for j in range(imageArray.shape[1]):
         densityLevel = ( 9 * int(grayImageArray[i][j]) ) // 255
+        densityLevel = min(densityLevel, 8)
         print(grayLevels[densityLevel], end='')
     print()
