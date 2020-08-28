@@ -27,8 +27,10 @@ Want to contribute? Great!
 *Advise: Make sure any significant contributions that include a new feature and donot fit the current architecture should be implemented as a class module and imported in the required existing file.*
 
 Sample:
-Input : 
+Input : [Input Image](https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Python.svg/768px-Python.svg.png)
+
 Output:
+
 ![Python Logo Image](https://github.com/sagalpreet/ASCII-ART/blob/master/sample.png?raw=true)
 
    [PIL]: <https://pillow.readthedocs.io/en/stable/>
