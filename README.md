@@ -27,7 +27,7 @@ Want to contribute? Great!
 *Advise: Make sure any significant contributions that include a new feature and donot fit the current architecture should be implemented as a class module and imported in the required existing file.*
 
 ```
-Just a small preview of an output with very less height and width: 
+Just a small preview of an output with very less height and width (Python Logo) : 
 
 @@@@@@@@@@@@@@@@@@@%%##**###%@@@@@@@@@@@@@@@@@@@@@
 @@@@@@@@@@@@@@@%*+=============+#@@@@@@@@@@@@@@@@@
