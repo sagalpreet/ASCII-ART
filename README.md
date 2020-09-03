@@ -15,7 +15,8 @@ ASCII-ART uses following dependencies:
 - Specify the path of source image and destination path where you want the output to be stored (int form of a text file). 
 - You may also consider changing the variable **' y '** in the code which specifies the height of image in terms of characters
 - Now, just run the python script in the terminal.
-- To best view the output zoom out as much as you feel will be good for the specified **' y '** (can do so in by **Ctrl -** )
+- To best view the output zoom out as much as you feel will be good for the specified **' y '**
+- It is advised to alter the **' y '** according to the viewport of your terminal window
 
 
 ### Development
