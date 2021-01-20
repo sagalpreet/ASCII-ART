@@ -48,7 +48,7 @@ Input : [Input Image](https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/
 
 Output:
 
-![Python Logo Image](https://github.com/sagalpreet/ASCII-ART/blob/master/sample.png?raw=true)
+![Python Logo Image](./sample/sample.png)
 
 
 ---
