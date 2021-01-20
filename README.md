@@ -1,23 +1,36 @@
 # ASCII-ART
 
-Just a fun repository to print any Image to console with ASCII characters ( grayscale, ofcourse ).
+Just a fun command-line application to print any Image to console with ASCII characters (grayscale) on Linux Machine.
 
 ### Tech
 
 ASCII-ART uses following dependencies:
 
+* [Python 3]
 * [PIL] 
 * [Numpy]
 
+### Installation
+
+- Clone the repository to your local machine.
+- Open terminal from where the repository is downloaded ("ASCII-ART" folder by default) and type in the following command.
+    ```
+    ./install.sh
+    ```
+- main.sh file will now be there inside the folder (this doesn't ensure that installation of all dependencies was successful)
+
 ### Setup
 
-- The only requirements to run the code on your local machine are **Terminal** and **Python3**
-- Specify the path of source image and destination path where you want the output to be stored (int form of a text file). 
-- You may also consider changing the variable **' y '** in the code which specifies the height of image in terms of characters
-- Now, just run the python script in the terminal.
-- To best view the output zoom out as much as you feel will be good for the specified **' y '**
-- It is advised to alter the **' y '** according to the viewport of your terminal window
-
+- Once all the dependencies are successfully downloaded and installed during installation, you are ready to go !
+- After installation execute main.sh from terminal as
+    ```
+    ./main.sh
+    ```
+- You'll be able to see a similar screen. Type the path of image file, for which you want to generate ASCII-ART and hit enter.
+    ![](./sample/start-screen.png)
+- Now you'll be prompted to enter the width (number of characters in a line). If you have no idea about this, just maximize your terminal window and enter 150 (recommended, but may not be the best). Enter the value and hit enter.
+    ![](./sample/width-screen.png)
+- Finally the ASCII-ART text will be printed to your console and will be saved in a text file by the name "output.txt".
 
 ### Development
 
@@ -42,3 +55,4 @@ Output:
 
    [PIL]: <https://pillow.readthedocs.io/en/stable/>
    [Numpy]: <https://numpy.org/>
+   [Python 3]: https://www.python.org/downloads/
